@@ -8,7 +8,6 @@ export async function getFilmes () {
 }
 
 
-
 export async function getFilme (id) {
     const url = `http://localhost:8080/v2/filmesAcme/filme/${id}`
     const response = await fetch (url)

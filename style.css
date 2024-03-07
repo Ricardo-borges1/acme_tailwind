@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     padding: 0;
@@ -22,8 +20,10 @@ body{
     top: 10px;
 }
 
-img{
-    width: 60%;
+
+.logoIMG{
+    width: 80%;
+
     
 }
 
@@ -33,5 +33,12 @@ h1{
     left: 30px;
 }
 
+.capa{
+    width: 500px;
+}
 
-
+.user{
+    position: absolute;
+    right: 2px;
+    top: 3%;
+}

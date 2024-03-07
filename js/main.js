@@ -4,12 +4,11 @@ import { getFilmes, getFilme} from "./filmes.js"
 
 
 function criarCard (filme){
-    const lista = document.getElementById('lista')
+
     const card = document.createElement('div')
 
     const titulo = document.createElement('h2')
-    titulo.textContent = filme.nome
-
+    //titulo.textContent = filme.nome
 
     //const texto = document.createElement('textarea')
     //texto.textContent = filme.sinopse
@@ -17,21 +16,22 @@ function criarCard (filme){
     const capa = document.createElement('img')
     capa.src = filme.foto_capa
 
-    lista.append(card)
     card.append(titulo,capa)
 
-    return lista
+    
+    return card
 }
 
-async function preencherContainer () {
-    const container = document.querySelector('body')
+async function preencherContainer() {
+    const container = document.querySelector('#lista')
 
-    const filme = await getFilmes ()
+    const filmes = await getFilmes()
 
-    filme.forEach (filme => {
-        const card = criarCard (filme)
+    console.log(filmes)
+    filmes.forEach (filme => {
+        const card = criarCard(filme)
+        console.log(container)
         container.appendChild(card)
-        console.log(card)
     })
 }
 

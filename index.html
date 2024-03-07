@@ -9,27 +9,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: { 
+              colors: {
+                clifford: '#da373d',
+              },
+              spacing:{
+                img:'500px',
+                w: '75%',
+                left: '200px',
+                top: '350px',
+                leftPesquisa: '720px',
+                topPesquisa: '20px',
+                leftButton: '40px',
+                topButton: '2px',
+                gapButton: '10px',
+                widthButton: '290px'
+              }
+            }
+          }
+        }
+      </script>
    <title>ACME FILMES</title>
 </head>
 
-<body class="bg-black">
+<body class="bg-black,">
     <div class="logo">
         <img src="./img/image 4.png" alt="">
-
     </div>
     <main>
-<h1 class="text-3xl font-bold, text-white ">
-    Olá, Ricardo
+<h1 class=" text-3xl font-bold, text-white ">
+    <pre>
+Olá, 
+Seja bem vindo
+    </pre>
+
+    <div class="flex items-center ml-leftPesquisa mt-topPesquisa">
+        <input class="border-4 border-blue-100 bg-white-700 text-black rounded-lg py-1 px-10 w-90 focus:outline-none focus:border-blue-500 text-center"
+        type="text" placeholder="Pesquise seu filme" id="buscarFilme"
+        ></div>
+
+        <div class="gap-gapButton flex flex-col">
+            <button
+  type="button"
+  class=" flex justify-center w-widthButton items-center mt-topButton ml-leftButton rounded border-2 bg-red-700 w-90 pb-4 pt-2.5 text-2xl   ">
+     Categorias
+</button>
+
+<button
+type="button"
+class=" flex justify-center items-center mt-topButton ml-leftButton rounded border-2 bg-red-700 px-24 w-widthButton pb-4 pt-2.5 text-2xl ">
+   Playlist   
+</button>
+        </div>
+   
   </h1>
+  <div id="lista" class="flex flex-row mt-top ml-left w-w " style="gap: 40px; flex:10px;   ">
+
     </main>
 
-    <div class="">
-
+    <div class="user">
         <img src="./img/image 27.png" alt="">
     </div>
 </body>
 
-
-<div id="lista"></div>
+</div>
 </html>
-
