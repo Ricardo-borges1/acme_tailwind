@@ -1,10 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 
-}
 body{
     display: flex;
     width: 100vw;
@@ -15,31 +9,5 @@ body{
     background-image: linear-gradient(180deg, #1A1D39,#898fc0 );
 }
 
-.logo{
-    position: fixed;
-    top: 10px;
-}
 
 
-.logoIMG{
-    width: 80%;
-
-    
-}
-
-h1{
-    position: fixed;
-    top: 40px;
-    left: 30px;
-}
-
-.capa{
-    width: 500px;
-}
-
-.user{
-    position: absolute;
-    right: 20px;
-    
-    top: 3%;
-}

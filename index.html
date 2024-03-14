@@ -19,15 +19,19 @@
               },
               spacing:{
                 img:'500px',
-                w: '75%',
-                left: '200px',
-                top: '450px',
+                w: '85%',
+                left: '120px',
+                top: '380px',
                 leftPesquisa: '720px',
                 topPesquisa: '20px',
                 leftButton: '40px',
-                topButton: '2px',
-                gapButton: '10px',
-                widthButton: '290px'
+                topButton: '-48px',
+                gapButton: '54px',
+                widthButton: '290px',
+                userTop: '3%',
+                widthMais: '34px',
+                maisTop: '280px',
+                rigthMais: '840px'
               }
             }
           }
@@ -36,12 +40,12 @@
    <title>ACME FILMES</title>
 </head>
 
-<body class="bg-black,">
-    <div class="logo">
+<body class="">
+    <div class=" fixed flex justify-center fixed top-2.5 'transform', 'transition', 'hover:scale-105', 'duration-300'">
         <img src="./img/image 4.png" alt="">
     </div>
     <main>
-<h1 class=" text-3xl font-bold, text-white ">
+<h1 class=" text-3xl font-bold, text-white fixed top-10 left-7 ">
     <pre>
 Olá, 
 Seja bem vindo
@@ -55,31 +59,52 @@ Seja bem vindo
         <div class="gap-gapButton flex flex-col">
             <button
   type="button"
-  class=" flex justify-center w-widthButton items-center mt-topButton ml-leftButton rounded border-2 bg-red-700 w-90 pb-4 pt-2.5 text-2xl   ">
+  class=" flex justify-center w-widthButton items-center mt-topButton ml-leftButton rounded border-2 bg-red-700 w-90 pb-4 pt-2.5 text-2xl  bg-red-500 hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-violet-300 ">
      Categorias
 </button>
 
 <button
 type="button"
-class=" flex justify-center items-center mt-topButton ml-leftButton rounded border-2 bg-red-700 px-24 w-widthButton pb-4 pt-2.5 text-2xl ">
-   Playlist   
+class=" flex justify-center items-center mt-topButton ml-leftButton rounded border-2 bg-red-700 px-24 w-widthButton pb-4 pt-2.5 text-2xl bg-red-500 hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-violet-300 ">
+   Assistidos   
 </button>
 
 <button
+   
 type="button"
-class=" flex justify-center w-widthButton items-center mt-topButton ml-leftButton rounded border-2 bg-blue-800 w-90 pb-4 pt-2.5 text-2xl   ">
-   Mnha lista
+class=" flex justify-center w-widthButton items-center mt-topButton ml-leftButton rounded border-2 bg-blue-800 w-90 pb-4 pt-2.5 text-2xl bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-violet-300   ">
+   Minha lista
 </button>
+
+<div class="absolute top-maisTop w-widthMais right-rigthMais ">
+  
+  <button>
+    <img src="./img/mais.png" alt="">
+  </button>
+</div>
         </div>
    
   </h1>
   <div id="lista" class="flex flex-row mt-top ml-left w-w " style="gap: 40px; flex:10px;   ">
 
-    </main>
+    <button 
+    type="button"
+    class="">
+    
+    </button>
 
-    <div class="user">
+
+    <button>
+      <div class=" absolute right-5 top-userTop ">
         <img src="./img/image 27.png" alt="">
     </div>
+
+    </button>
+
+    </main>
+
+    
+
 </body>
 
 </div>
