@@ -6,7 +6,7 @@ import { getFilmes, getFilme, postFilme, deleteFilme} from "./filmes.js"
 function criarCard (filme){
 
     const card = document.createElement('div')
-    card.classList.add('flex', 'flex-col', 'bg-white', 'rounded-lg', 'shadow-lg', 'p-4', 'mb-2', 'transform', 'trnsition', 'hover:scale-105', 'duration-300', 'max-w-sm', 'mx-auto')
+    card.classList.add('flex', 'flex-col', 'bg-white', 'rounded-lg', 'shadow-lg', 'p-4', 'mb-2', 'transform', 'trnsition', 'hover:scale-105', 'duration-300', 'max-w-sm', 'mx-auto', )
 
     const titulo = document.createElement('h2')
     titulo.classList.add('text-lg', 'font-bold', 'text-red-700', 'mb-2', 'text-center')
@@ -17,6 +17,7 @@ function criarCard (filme){
 
     const capa = document.createElement('img')
     capa.src = filme.foto_capa
+    capa.classList.add('w-widthImg', 'h-heightImg', )
 
     const preco = document.createElement('p')
     preco.classList.add('text-md', 'text-gray-800', 'font-bold', 'mb-2', 'text-center', 'pt-2')
