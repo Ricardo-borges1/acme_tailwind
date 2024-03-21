@@ -1,12 +1,7 @@
 
 body{
     display: flex;
-    width: 100vw;
-    height: 100vh;  
-    gap: 320px; 
-    align-items: center;
     justify-content: center;
-    background-image: linear-gradient(180deg, #1A1D39,#898fc0 );
 }
 
 

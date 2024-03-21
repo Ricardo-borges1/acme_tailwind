@@ -12,7 +12,7 @@ export async function getFilme (id) {
     const response = await fetch (url)
     const data = await response.json ()
 
-    return data.filme[0]
+    return data.filme
 }
 
 export async function postFilme(filme) {

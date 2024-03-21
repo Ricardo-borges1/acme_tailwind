@@ -5,8 +5,18 @@ import { getFilmes, getFilme, postFilme, deleteFilme} from "./filmes.js"
 
 function criarCard (filme){
 
+    const button = document.createElement('button')
+    button.classList.add('bg-transparent')
+    button.onclick = redirecionar
+
+    const id = filme.id
+    
+
     const card = document.createElement('div')
-    card.classList.add('flex', 'flex-col', 'bg-white', 'rounded-lg', 'shadow-lg', 'p-4', 'mb-2', 'transform', 'trnsition', 'hover:scale-105', 'duration-300', 'max-w-sm', 'mx-auto', )
+    card.classList.add('flex', 'flex-col', 'bg-white', 'rounded-lg', 'shadow-lg', 'p-2', 'mb-8', 'transform', 'trnsition', 'hover:scale-105', 'duration-300', 'max-w-sm', 'mx-auto', )
+    button.id = id
+
+    
 
     const titulo = document.createElement('h2')
     titulo.classList.add('text-lg', 'font-bold', 'text-red-700', 'mb-2', 'text-center')
@@ -25,15 +35,20 @@ function criarCard (filme){
 
 
     const duracao = document.createElement('p')
-    duracao.classList.add('text-md', 'text-red-800', 'font-bold', 'mb-2', 'text-center', 'pt-2')
-    duracao.textContent = filme.duracao
+    // duracao.classList.add('text-md', 'text-red-800', 'font-bold', 'mb-2', 'text-center', 'pt-2')
+    // duracao.textContent = filme.duracao
     card.append(titulo,capa,preco,duracao)
+    button.append(card)
 
-    
-    return card    
+    return button    
 }
 
 
+async function redirecionar(){
+    const idFilme = this.id
+    localStorage.setItem('idfilme', idFilme)
+    window.location.href = './home.html'
+}
 
 
 
@@ -42,10 +57,10 @@ async function preencherContainer() {
 
     const filmes = await getFilmes()
 
-    console.log(filmes)
+    
     filmes.forEach (filme => {
         const card = criarCard(filme)
-        console.log(container)
+        
         container.appendChild(card)
     })
 }
