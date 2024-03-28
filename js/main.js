@@ -77,6 +77,6 @@ const filme = {
             "valor_unitario": 40
 }
 
-deleteFilme(17)
+//deleteFilme(17)
 //postFilme(filme)
 preencherContainer()
