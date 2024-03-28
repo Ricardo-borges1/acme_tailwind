@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./login.js" type="module" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: { 
+              colors: {
+                clifford2: '#1A1D39',
+                cor1: '#1A1D39',
+                cor2: '#AFB2CF'
+              },
+              spacing:{
+                img:'500px',
+                w: '60%',
+                left: '80px',
+                top: '450px',
+                leftPesquisa: '720px',
+                topPesquisa: '20px',
+                leftButton: '40px',
+                topButton: '-48px',
+                gapButton: '54px',
+                widthButton: '120px',
+                userTop: '3%',
+                widthMais: '34px',
+                maisTop: '280px',
+                rigthMais: '840px',
+                widthImg: '600px',
+                heigthImg: '140px',
+                userTop2: '2%',
+                widthuser2: '80px',
+                topUser2: '100px'
+              }
+            }
+          }
+        }
+      </script>
+      <title>CMDS</title>
+</head>
+
+<body class="bg-gradient-to-b from-cor1 from-60% via-cor1 via-60% to-white w-[100%] h-[919px] z[-1]">
+    <div class=" fixed flex left-[840px] top-[50px] 'transform', w-[250px]  'transition', 'hover:scale-105',  'duration-300'">
+        <img src="./img/image 4.png" alt="">
+    </div>
+
+    <h1 class="text-2xl font-black text-white fixed top-[200px] right-[490px] ">
+        <pre>
+            Aqui  estão os filmes já cadastrado, para adicionar novos filmes
+            basta clicar nos ícones ao lado. 
+        </pre>
+    </h1>
+
+    <div class="flex fixed items-center mt-topPesquisa">
+        <input class=" fixed border-4 border-blue-100 bg-white-700 top-[300px] left-[450px] text-black rounded-lg py-[36px] px-[400px] width-[900px]focus:outline-none focus:border-blue-500 text-center"
+        type="text" placeholder="" id="buscarFilme"
+        ></div>
+
+        <div class="flex fixed items-center mt-topPesquisa">
+            <input class=" fixed border-4 border-blue-100 bg-white-700 top-[430px] left-[450px] text-black rounded-lg py-[36px] px-[400px] width-[900px]focus:outline-none focus:border-blue-500 text-center"
+            type="text" placeholder="" id="buscarFilme"
+            ></div>
+
+            <div class="flex fixed items-center mt-topPesquisa">
+                <input class=" fixed border-4 border-blue-100 bg-white-700 top-[560px] left-[450px] text-black rounded-lg py-[36px] px-[400px] width-[900px]focus:outline-none focus:border-blue-500 text-center"
+                type="text" placeholder="" id="buscarFilme"
+                ></div>
+
+                <div class="flex fixed items-center mt-topPesquisa">
+                    <input class=" fixed border-4 border-blue-100 bg-white-700 top-[690px] left-[450px] text-black rounded-lg py-[36px] px-[400px] width-[900px]focus:outline-none focus:border-blue-500 text-center"
+                    type="text" placeholder="" id="buscarFilme"
+                    ></div>
+    
+</body>
+</html>
