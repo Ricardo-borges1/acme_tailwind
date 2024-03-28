@@ -1,28 +1,31 @@
 'use strict'
-import {getFilmes,deleteFilme} from "./js/filmes.js"
+import {getFilmes,deleteFilme} from "./filmes.js"
 const listaFilme = await getFilmes()
 const container = document.getElementById('container')
 
 function criarFilme(info){
     const filme = document.createElement('div')
-    filme.classList.add('h-20','border-b-4','border-[#ECDDA2]', 'grid', 'grid-cols-4', 'place-items-center')
+    filme.classList.add('h-20','border-b-4','border-[#fffffff]', 'grid', 'grid-cols-4', 'place-items-center')
     const id = document.createElement('h1')
-    id.classList.add('text-[#ECDDA2]','text-3xl')
+    id.classList.add('text-[#ffffff]','text-3xl')
     id.textContent=info.id
     const produto = document.createElement('p')
     produto.textContent=info.nome
-    produto.classList.add('text-[#ECDDA2]','text-3xl')
+    produto.classList.add('text-[#ffffff]','text-3xl')
     const valor = document.createElement('p')
-    valor.classList.add('text-[#ECDDA2]','text-3xl')
+    valor.classList.add('text-[#ffffff]','text-3xl')
     valor.textContent= 'R$'+info.valor_unitario
     const icones = document.createElement('div')
-    icones.classList.add('text-[#ECDDA2]','text-3xl','flex','gap-4')
+    icones.classList.add('text-[#fffffff]','text-3xl','flex','gap-4')
     const iconeEditar = document.createElement('i')
-    iconeEditar.classList.add('bx','bxs-edit-alt','cursor-pointer')
+    iconeEditar.classList.add('bx','bx-pencil','cursor-pointer')
     const iconeDeletar = document.createElement('i')
-    iconeDeletar.classList.add('bx','bxs-trash','text-[#FF0000]','cursor-pointer')
+    iconeDeletar.classList.add('bx','bxs-trash-alt','text-[#FF0000]','cursor-pointer') 
+    const iconeAdicionar = document.createElement ('i')
+    iconeAdicionar.classList.add('bx', 'bx-plus-medical')
+    iconeAdicionar.id = 'add'
 
-    icones.replaceChildren(iconeEditar,iconeDeletar)
+    icones.replaceChildren(iconeEditar,iconeDeletar,iconeAdicionar)
     filme.replaceChildren(id,produto,valor,icones)
     container.appendChild(filme)
 
@@ -33,13 +36,15 @@ function criarFilme(info){
         deleteFilme(info.id)
         window.location.reload()
     })
+
+    iconeAdicionar.addEventListener('click', ()=>{
+        window.location.href = '../cadastro.html'
+    })
 }
 
 const add = document.getElementById('add')
 
-add.addEventListener('click', ()=>{
-    window.location.href = '../cadastro.html'
-})
+
 
 listaFilme.forEach(filme => {
     criarFilme(filme)

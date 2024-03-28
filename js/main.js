@@ -4,10 +4,13 @@ import { getFilmes, getFilme, postFilme, deleteFilme} from "./filmes.js"
 
 
 function criarCard (filme){
-
+    console.log(filme.id);
     const button = document.createElement('button')
     button.classList.add('bg-transparent')
-    button.onclick = redirecionar
+    button.addEventListener('click', function(){
+        localStorage.setItem('idfilme', filme.id)
+        window.location.href = '../html/home.html'
+    })
 
     const id = filme.id
     
@@ -44,11 +47,11 @@ function criarCard (filme){
 }
 
 
-async function redirecionar(){
-    const idFilme = this.id
-    localStorage.setItem('idfilme', idFilme)
-    window.location.href = './home.html'
-}
+// async function redirecionar(){
+//     // const idFilme = this.id
+//     localStorage.setItem('idfilme', this.id)
+//     window.location.href = '../html/home.html'
+// }
 
 
 
