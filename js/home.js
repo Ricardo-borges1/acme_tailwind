@@ -21,19 +21,25 @@ async function preencherCampos(id){
     titulo.classList.add('text-4xl', 'text-center', 'text-red-300', 'pb-[375px]', 'pl-[850px]')
    
     const valorD = document.createElement('div')
-    valorD.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[170px]', 'h-[50px]', 'text-center', 'fixed', 'left-[700px]','rounded-lg', 'inline-block', 'align-middle')
+    valorD.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[170px]', 'h-[50px]', 'text-center', 'fixed', 'left-[570px]','rounded-lg', 'inline-block', 'align-middle')
     const valor = document.createElement('p')
     valor.textContent = `Valor : R$:${filme.valor_unitario}`
     valorD.append(valor)
 
     const duracaoD = document.createElement('div')
-    duracaoD.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[580px]', 'h-[50px]', 'text-center', 'fixed', 'left-[1000px]','rounded-lg', 'inline-block', 'align-middle')
+    duracaoD.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[500px]', 'h-[50px]', 'text-center', 'fixed', 'left-[800px]','rounded-lg', 'inline-block', 'align-middle')
     const duracao = document.createElement('p')
     duracao.textContent = `Duração: ${filme.duracao}`
     duracaoD.append(duracao)
     
+    const dataLancamento = document.createElement('div')
+    dataLancamento.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[540px]', 'h-[50px]', 'text-center', 'fixed', 'left-[1360px]','rounded-lg', 'inline-block', 'align-middle')
+    const data = document.createElement('p')
+    data.textContent = `Lançamento: ${filme.data_lancamento}`
+    dataLancamento.append(data)
     
-    filho2.append(titulo, sinopse, valorD,duracaoD)
+    
+    filho2.append(titulo, sinopse, valorD,duracaoD,dataLancamento)
 
     return filho2
 }
