@@ -1,132 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./js/main.js" type="module" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/main.js" type="module" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#141C5A',
-          },
-          spacing: {
-            img: '500px',
-            w: '90%',
-            left: '80px',
-            top: '450px',
-            leftPesquisa: '720px',
-            topPesquisa: '20px',
-            leftButton: '40px',
-            topButton: '-48px',
-            gapButton: '54px',
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: { 
+              colors: {
+                clifford: '#141C5A',
+              },
+              spacing:{
+                
+                imgg: '450px',
+                capa: '230px',
+                card: "200px",
+                body:'100vh',
+                leftButton: '-860px',
+               topButton: '100px',
             widthButton: '290px',
-            userTop: '3%',
-            widthMais: '34px',
-            maisTop: '212px',
-            rigthMais: '840px',
-            widthImg: '600px',
-            heigthImg: '140px',
-            userTop2: '2%',
-            widthuser2: '80px',
-            topUser2: '100px'
+
+              },
+              zIndex: {
+                img: '-1',
+      }
+            }
           }
         }
-      }
-    }
-  </script>
-  <title>ACME FILMES</title>
+      </script>
+   <title>ACME FILMES</title>
 </head>
 
-<body class=" bg-gradient-to-b from-clifford w-screen bg-no-repeat h-screen z[-1]">
-  <header>
-    
-  </header>
-  <div class=" flex justify-center top-2.5 'transform', 'transition', 'hover:scale-105', 'duration-300'">
-    
-  </div>
-  <main>
-    <h1 class=" text-3xl font-bold, text-white fixed top-10 left-7 ">
-      <pre>
-  Olá, 
-Seja bem vindo
-    </pre>
 
-      <div class="flex items-center ml-leftPesquisa mt-topPesquisa">
-        <input
-          class="border-4 border-blue-100 bg-white-700 text-black rounded-lg py-1 px-10 w-90 focus:outline-none focus:border-blue-500 text-center"
-          type="text" placeholder="Pesquise seu filme" id="buscarFilme">
-      </div>
+<body class="bg-gradient-to-b from-clifford w-screen bg-no-repeat h-screen z[-1]">
 
-      <div class="gap-gapButton flex flex-col">
-        <button type="button"
-          class=" flex justify-center w-widthButton items-center mt-topButton ml-leftButton rounded-lg rounded border-2 bg-red-700 w-90 pb-4 pt-2.5 text-2xl  bg-red-500 hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-violet-300 ">
-          Categorias
-        </button>
-
-        <button type="button"
-          class=" flex flex-wrap justify-center w-widthButton items-center mt-topButton ml-leftButton rounded-lg rounded border-2 bg-blue-800 w-90 pb-4 pt-2.5 text-2xl bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-violet-300   ">
-          Minha lista
-        </button>
-
-        <div class="absolute top-maisTop w-widthMais right-rigthMais ">
-
-          <button>
-            <img src="./img/mais.png" alt="">
-          </button>
-        </div>
-      </div>
-
-    </h1>
-
-    
+   <header>
    
+    <div class="absolute top-[30px] left-[40%]">
+      <img src="./img/image 4.png" alt="">
+    </div>
 
-      <button type="button" class="">
+   
+    <div class="flex items-center absolute top-[180px] left-[720px]">
+      <input
+        class="border-4 border-blue-100 bg-white-700 text-black rounded-lg py-1 px-0 w-[390px] focus:outline-none focus:border-blue-500 text-center"
+        type="text" placeholder="Pesquise seu filme" id="buscarFilme">
+    </div>
 
-      </button>
-
-      <button>
-        <div class=" absolute right-5 top-userTop ">
-          <img src="./img/image 27.png" alt="">
-        </div>
-      </button>
-
-      <button>
-        <div class="absolute right-[97px] top-[20px] w-widthuser2 ">
-          <a href="./html/login.html"><img src="./img/administrador.png" alt=""></a>
-        </div>
-      </button>
-
-      <div class="outraTela">
-
+    <button>
+      <div class=" absolute right-5 top-userTop ">
+        <img src="./img/image 27.png" alt="">
       </div>
+    </button>
 
-      <section class="pt-[400px]">
-        <div class="flex flex-row align-center justify-center w-full h-full p-10 ">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 " id="lista">
-    
-          </div>
-        </div>
-      </section>
-        
-  
-      
+    <button>
+      <div class="absolute right-[97px] top-[20px] w-[70px]">
+        <a href="./html/login.html"><img src="./img/administrador.png" alt=""></a>
+      </div>
+    </button>
+   
+   </header>
 
-  </main>
+   <main>
 
+    <div class="flex flex-col gap-2 pt-40">
+      <button type="button"
+        class=" flex text-white justify-center w-widthButton items-center  ml-leftButton rounded-lg rounded border-2 bg-red-700 w-90 pb-4 pt-2.5 text-2xl  bg-red-500 hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-violet-300 ">
+        Categorias
+      </button>
 
+      <button type="button"
+        class=" text-white flex flex-wrap justify-center w-widthButton items-center  ml-leftButton rounded-lg rounded border-2 bg-blue-800 w-90 pb-4 pt-2.5 text-2xl bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-violet-300   ">
+        Minha lista
+      </button>
+
+    <div class=" absolute px-[5px] left-[150px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 top-96 gap-[35px] " id="filmes"></div>
+
+    </main>
 
 </body>
 
 </div>
-
 </html>
