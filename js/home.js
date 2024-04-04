@@ -18,18 +18,22 @@ async function preencherCampos(id){
  
     const titulo = document.createElement('h1')
     titulo.textContent = filme.nome
-    titulo.classList.add('text-4xl', 'text-center', 'text-white', 'pb-[360px]', 'pl-[290px]')
+    titulo.classList.add('text-4xl', 'text-center', 'text-red-300', 'pb-[375px]', 'pl-[850px]')
    
     const valorD = document.createElement('div')
-    valorD.classList.add('text-red-700', 'text-2xl' , 'bg-red-200' , 'w-[170px]', 'h-[50px]', 'text-center', 'fixed', 'left-[700px]','rounded-lg', 'inline-block', 'align-middle')
+    valorD.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[170px]', 'h-[50px]', 'text-center', 'fixed', 'left-[700px]','rounded-lg', 'inline-block', 'align-middle')
     const valor = document.createElement('p')
     valor.textContent = `Valor : R$:${filme.valor_unitario}`
-   
-
     valorD.append(valor)
+
+    const duracaoD = document.createElement('div')
+    duracaoD.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[580px]', 'h-[50px]', 'text-center', 'fixed', 'left-[1000px]','rounded-lg', 'inline-block', 'align-middle')
+    const duracao = document.createElement('p')
+    duracao.textContent = `Duração: ${filme.duracao}`
+    duracaoD.append(duracao)
     
     
-    filho2.append(titulo, sinopse, valorD)
+    filho2.append(titulo, sinopse, valorD,duracaoD)
 
     return filho2
 }
@@ -40,10 +44,10 @@ const fotoTitulo = async(id) =>{
     console.log(filme);
 
     const filho1 = document.createElement('div')
-    filho1.classList.add('ml-[100px]', 'posterFilme', 'bg-[#]', 'top-[200px]', 'min-w-[480px]', 'min-h-[400px]','text-[#FFFFFF]', 'h-fit', 'flex', 'flex-col', 'items-center', 'border-2', 'border-[#FFFFFFFF]', 'mt-[180px]')
+    filho1.classList.add('ml-[90px]', 'posterFilme', 'bg-[#]', 'top-[150px]', 'max-w-[400px]', 'max-h-[800px]','text-[#FFFFFF]', 'h-fit', 'fixed', 'flex-col', 'items-center', 'border-2', 'border-[#FFFFFFFF]', 'mt-[20px]')
    
     const poster = document.createElement('img')
-    poster.classList.add('min-w-[470px]','min-h-[400px]', 'flex', )
+    poster.classList.add('min-w-[400px]','max-h-[700px]', 'fixed', )
     poster.src = filme.foto_capa
 
     filho1.append(poster)

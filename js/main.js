@@ -16,7 +16,7 @@ function criarCard (filme){
     
 
     const card = document.createElement('div')
-    card.classList.add('flex', 'flex-col', 'bg-white', 'rounded-lg', 'shadow-lg', 'p-2', 'mb-8', 'transform', 'trnsition', 'hover:scale-105', 'duration-300', 'max-w-sm', 'mx-auto', )
+    card.classList.add('flex', 'flex-col', 'bg-white', 'rounded-lg', 'shadow-lg', 'p-2', 'mb-8', 'transform', 'trnsition', 'hover:scale-105', 'duration-300', 'max-w-[300px]', 'mx-10', )
     button.id = id
 
     
