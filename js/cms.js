@@ -1,5 +1,5 @@
 'use strict'
-import {getFilmes,deleteFilme} from "./filmes.js"
+import {getFilmes,deleteFilme, putFilme, postFilme} from "./filmes.js"
 const listaFilme = await getFilmes()
 const container = document.getElementById('container')
 
