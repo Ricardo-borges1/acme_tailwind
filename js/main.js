@@ -1,6 +1,6 @@
 'use script'
 
-import {getFilmes, getFilme, deleteFilme} from "./filmes.js"
+import {getFilmes, getFilme, deleteFilme, postFilme, putFilme} from "./filmes.js"
 
 function criarCard (filme){
 

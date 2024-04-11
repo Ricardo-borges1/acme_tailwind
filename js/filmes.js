@@ -1,4 +1,6 @@
 'use strict'
+
+
 export async function getFilmes () {
    const url = 'http://localhost:8080/v2/filmesAcme/filmes' 
    const response = await fetch (url)
@@ -36,5 +38,21 @@ export async function deleteFilme(id){
         method: 'DELETE'
     }
     const response = await fetch ( url, options)
+    return response.ok
+}
+
+export async function putFilme (id,filme){
+    const url = `http://localhost:8080/v1/filmesAcme/updateFilme/${id}`
+
+    const options = {
+        method : 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(filme)
+    }
+
+    const response = await fetch (url,options)
+
     return response.ok
 }
