@@ -30,7 +30,7 @@ function criarFilme(info){
     container.appendChild(filme)
 
     iconeEditar.addEventListener('click',()=>{
-        window.location.href='../editar.html?id='+info.id
+        window.location.href='../html/editar.html?id='+info.id
     })
     iconeDeletar.addEventListener('click',()=>{
         deleteFilme(info.id)
@@ -38,7 +38,7 @@ function criarFilme(info){
     })
 
     iconeAdicionar.addEventListener('click', ()=>{
-        window.location.href = '../cadastro.html'
+        window.location.href = '../html/cadastrar.html'
     })
 }
 

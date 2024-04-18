@@ -19,6 +19,7 @@ export async function getFilme(id) {
 }
 
 export async function postFilme(filme) {
+    console.log(filme);
      const url = 'http://localhost:8080/v2/filmesAcme/filme'
      const options = {
         method: 'POST',
@@ -28,6 +29,7 @@ export async function postFilme(filme) {
         body: JSON.stringify(filme)
      }
      const response = await fetch (url,options)
+     console.log(response)
      return response.ok
 
 }
@@ -42,6 +44,10 @@ export async function deleteFilme(id){
 }
 
 export async function putFilme (id,filme){
+
+    console.log(filme);
+
+    
     const url = `http://localhost:8080/v1/filmesAcme/updateFilme/${id}`
 
     const options = {
@@ -52,7 +58,9 @@ export async function putFilme (id,filme){
         body: JSON.stringify(filme)
     }
 
+    
     const response = await fetch (url,options)
+    console.log(response);
 
     return response.ok
 }

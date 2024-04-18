@@ -8,7 +8,7 @@ function criarCard (filme){
     button.classList.add('bg-transparent')
     console.log(filme)
     button.addEventListener('click', ()=>{
-        location.href = '../html/home.html'
+        location.href = './html/home.html'
         localStorage.setItem('idfilme', filme.id)
     })
 
@@ -31,6 +31,10 @@ function criarCard (filme){
     card.append(capa,titulo,preco)
     button.append(card)
 
+    card.addEventListener('click',()=> {
+        window.location.href='../html/home.html?id='+filme.id
+    })
+
     return button
 }
 
@@ -49,10 +53,5 @@ async function preencherContainer(){
 
 
 
-// async function setIDFilme(){
-//     const idFilme=this.id
-//     localStorage.setItem('idFilme',idFilme)
-//     window.location.href='./html/home.html'
-// }
 
 preencherContainer()
