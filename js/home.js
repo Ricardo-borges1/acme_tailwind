@@ -9,8 +9,21 @@ console.log(idFilme)
 async function preencherCampos(id){
     const filme = await getFilme(id)
     console.log(filme);
-   
+    let stringGeneros = ''
+
+    const listaGenerosFilmes = filme.generoFilmes
+    if(listaGenerosFilmes){
+        listaGenerosFilmes.forEach(genero => {
+            stringGeneros += genero.nome+", "
+        });
+    } 
+
+    console.log(stringGeneros)
     const filho2 = document.createElement('div')
+
+    const generosText = document.createElement('p')
+    generosText.classList.add('text-2xl', 'text-center', 'text-red-300', 'pb-[0px]', 'pl-[850px]')
+    generosText.textContent=stringGeneros.slice(0,stringGeneros.length-2)
 
     const sinopse = document.createElement('p')
     sinopse.textContent = filme.sinopse
@@ -29,17 +42,21 @@ async function preencherCampos(id){
     const duracaoD = document.createElement('div')
     duracaoD.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[500px]', 'h-[50px]', 'text-center', 'fixed', 'left-[800px]','rounded-lg', 'inline-block', 'align-middle')
     const duracao = document.createElement('p')
-    duracao.textContent = `Duração: ${filme.duracao}`
+    duracao.textContent = `Duração: ${filme.duracao.substring(11,19)}`
     duracaoD.append(duracao)
     
     const dataLancamento = document.createElement('div')
     dataLancamento.classList.add('text-red-700', 'text-2xl' , 'pt-[7px]','bg-red-200' , 'w-[540px]', 'h-[50px]', 'text-center', 'fixed', 'left-[1360px]','rounded-lg', 'inline-block', 'align-middle')
     const data = document.createElement('p')
-    data.textContent = `Lançamento: ${filme.data_lancamento}`
+    data.textContent = `Lançamento: ${filme.data_lancamento.substring(0,10)}`
+
+    
+    
+    
     dataLancamento.append(data)
     
     
-    filho2.append(titulo, sinopse, valorD,duracaoD,dataLancamento)
+    filho2.append(titulo, generosText,sinopse, valorD,duracaoD,dataLancamento)
 
     return filho2
 }

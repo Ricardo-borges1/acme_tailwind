@@ -73,7 +73,7 @@ salvar.addEventListener('click', () => {
 
     putFilme(id, alteracoes)
         
-        // window.location.href = '../html/cms.html';
+        window.location.href = '../html/cms.html';
         
     
 });
