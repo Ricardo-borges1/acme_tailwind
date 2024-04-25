@@ -7,6 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./src/input.css">
     <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="cms.css">
     <script type="module" src="../js/cms.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -46,10 +47,32 @@
     <title>cms</title>
 </head>
 
-<body class="bg-gradient-to-b from-cor1 from-60% via-cor1 via-60% to-cor2 to-100% to-white  h-full bg-no-repeat">
+<body class="bg-gradient-to-b from-[#1A1D39] via-blue-700  to-red-700">
 
     <header class="h-24 flex justify-between items-center pt-28 p-12 border-b-4 border-[#ffffFF] flex top-[20px]">
+    
+       <button class="fixed left-[90%] top-[50px] text-white bg-black p-3 text-center rounded-[18px] flex items-center font-bold transform hover:scale-105 duration-300" id="add">
+        <a class=' bx bx-plus font-bold text-center' href="./cadastrar.html" > ADD NEW</a>
+    </button>
+
+    <!-- menu -->
+    <div class="menu">
+      <ul> ☰
+          <li><span class="material-symbols-outlined"> <a href="./cms.html"> Filme</a></span></li>
+          <li><span class="material-symbols-outlined"> <a href="./genero.html"> Gênero</a></span></li>
+          <li><span class="material-symbols-outlined"> <a href="./ator.html"> Ator</a> </span></li>
+          <li><span class="material-symbols-outlined"> <a href="./diretor.html"> Diretor</a></span></li>
+          <li><span class="material-symbols-outlined"> <a href="./classificacao.html"> Classificação</a></span></li>
+      </ul>
+      </div>
+
+      </select>
+      <div class="select-arrow"></div>
+  </div>
+
+    </div>
       <img  class="mb-10" src="../img/image 4.png" alt="">
+
         <div class="h-12 flex items-center gap-5">
                 <i class='font-bold text-center text-3xl' id="add"></i>
             </button>
