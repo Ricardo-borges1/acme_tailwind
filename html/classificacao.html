@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="cms.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script type="module" src="../js/cms.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { 
+            colors: {
+              clifford: '#08157a',
+              cor1: '#1A1D39',
+              cor2: '#AFB2CF'
+            },
+            spacing:{
+              img:'500px',
+              w: '90%',
+              left: '80px',
+              top: '450px',
+              leftPesquisa: '720px',
+              topPesquisa: '20px',
+              leftButton: '40px',
+              topButton: '-48px',
+              gapButton: '54px',
+              widthButton: '290px',
+              userTop: '3%',
+              widthMais: '34px',
+              maisTop: '280px',
+              rigthMais: '840px',
+              widthImg: '600px',
+              heigthImg: '140px',
+              userTop2: '2%',
+              widthuser2: '80px',
+              topUser2: '100px'
+            }
+          }
+        }
+      }
+    </script>
+    <title>cms</title>
+</head>
+
+<body class="bg-gradient-to-b from-[#1A1D39] via-blue-700  to-red-700">
+
+
+ <div class="h-[50px] w-full bg-[#1A1D39]"></div>
+ <div class="absolute top-[10px] left-[40%] flex">
+
+  <a href="./cms.html" class="block px-4 py-2 text-white hover:bg-gray-700">Filme</a>
+  <a href="./ator.html" class="block px-4 py-2 text-white hover:bg-gray-700">Ator</a>
+  <a href="./diretor.html" class="block px-4 py-2 text-white hover:bg-gray-700">Diretor</a>
+  <a href="./genero.html" class="block px-4 py-2 text-white hover:bg-gray-700">Gênero</a>
+  <a href="./classificacao.html" class="block px-4 py-2 text-white hover:bg-gray-700">Classificação</a>
+</div>
+
+
+    <header class="h-24 flex justify-between items-center pt-28 p-12 border-b-4 border-[#ffffFF] flex top-[20px]">
+    
+       <button class="absolute left-[90%] top-[10px] text-white bg-[#1A1D39] p-3 text-center rounded-[18px] flex items-center font-bold transform hover:scale-105 duration-300" id="add">
+        <a class=' bx bx-plus font-bold text-center' href="./cadastrar.html" > ADD NEW</a>
+    </button>
+
+    <!-- menu -->
+    <!-- <div class="fixed left-[200px]">
+      <div class="relative">
+        <button class="flex items-center px-4 py-2 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-200">
+          Opções
+        </button>
+        <div class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg">
+          <a href="./ator.html" class="block px-4 py-2 text-white hover:bg-gray-700">Ator</a>
+          <a href="./diretor.html" class="block px-4 py-2 text-white hover:bg-gray-700">Diretor</a>
+          <a href="./genero.html" class="block px-4 py-2 text-white hover:bg-gray-700">Gênero</a>
+          <a href="./classificacao.html" class="block px-4 py-2 text-white hover:bg-gray-700">Classificação</a>
+        </div>
+      </div>
+    </div> -->
+<!-- 
+      </select> -->
+      <div class="select-arrow"></div>
+  </div>
+
+    </div>
+      <img  class="mb-10" src="../img/image 4.png" alt="">
+
+        <div class="h-12 flex items-center gap-5">
+                <i class='font-bold text-center text-3xl' id="add"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="h-5/6 w-full">
+        <div class="h-20 border-b-4 border-[#ffffFF] grid grid-cols-4 place-items-center">
+            <h1 class="text-[#E13434]  text-3xl h-full flex items-center">ID</h1>
+            <div class="text-[#E13434]  text-3xl h-full flex items-center">CLASSIFICAÇÃO</div>
+            <div class="text-[#E13434]  text-3xl h-full flex items-center">VALOR</div>
+        </div>
+        <div id="container">
+        </div>  
+    </main>
+
+
+
+</body>
+
+</html>
