@@ -36,7 +36,7 @@ function criarAtor(info){
     container.appendChild(ator)
 
     iconeEditar.addEventListener('click',()=>{
-        window.location.href='../html/editar.html?id='+info.id
+        window.location.href='../html/editarAtor.html?id='+info.id
     })
     iconeDeletar.addEventListener('click',()=>{
         deleteAtor(info.id)
