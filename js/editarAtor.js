@@ -1,16 +1,14 @@
 'use strict'
-import { getAtor,postAtor, putAtor} from "./ator.js"
+import { getAtor,getAtorById,postAtor, putAtor} from "./ator.js"
 const id = new URLSearchParams(window.location.search).get('id')
-
 
 
 // função para puxar os dados do filme pelo ID
 async function dadosAtor(){
-
+    
     if(id){
-        
-      
-        const infoAtor = await getAtor(id)
+        const infoAtor = await getAtorById(id)
+        console.log(infoAtor);
         // console.log(infoFilme.sinopse)
         
         const nome = document.getElementById('nome')
@@ -28,15 +26,19 @@ async function dadosAtor(){
         
         nome.value = infoAtor.nome
         biografia.textContent = infoAtor.biografia
-        
+        nascimento.value = infoAtor.data_nascimento.slice(0,10)
+        if(infoAtor.data_falecimento){
+            falecimento.value = infoAtor.data_falecimento.slice(0,10)
+        }
+
         
        
         poster.src = infoAtor.foto
        
-        const salvar = document.getElementById('salvar')
+        const editar = document.getElementById('editar')
 
 // Botão de salvar alterações
-salvar.addEventListener('click', () => {
+editar.addEventListener('click', () => {
 
     const nomeInput = nome.value;
     const biografiaInput = biografia.value;
@@ -64,7 +66,7 @@ salvar.addEventListener('click', () => {
 
     putAtor(id, alteracoes)
         
-        window.location.href = '../html/cms.html';
+       // window.location.href = '../html/ator.html';
         
     
 });

@@ -44,7 +44,7 @@ function criarAtor(info){
     })
 
     iconeAdicionar.addEventListener('click', ()=>{
-        window.location.href = '../html/cadastrar.html'
+        window.location.href = '../html/cadastrarDiretor.html'
     })
 }
 

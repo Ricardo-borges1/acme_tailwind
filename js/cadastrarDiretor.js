@@ -1,5 +1,5 @@
 'use strict'
-import {getAtor,postAtor, putAtor} from "./ator.js"
+import {getDiretor,postDiretor, putDiretor} from "./diretor.js"
 
 // Import das tags do HTML pelo ID
 const nome = document.getElementById('nome')
@@ -28,9 +28,8 @@ cadastrar.addEventListener('click', ()=>{
         
     }
 
-    postAtor(insert)
-    window.location.href = '../html/ator.html'
-    
+    postDiretor(insert)
+    window.location.href = '../html/diretor.html'
     
 })
 

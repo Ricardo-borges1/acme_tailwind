@@ -12,7 +12,9 @@ const classifi = document.getElementById('classificacao')
 const cadastrar = document.getElementById('cadastrar')
 const poster = document.getElementById('poster')
 
+
 cadastrar.addEventListener('click', ()=>{
+
 
     const tituloInput = titulo.value
     const sinopseInput = sinopse.value

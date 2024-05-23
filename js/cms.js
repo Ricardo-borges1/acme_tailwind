@@ -9,19 +9,25 @@ function criarFilme(info){
     const id = document.createElement('h1')
     id.classList.add('text-[#ffffff]','text-3xl')
     id.textContent=info.id
+
     const produto = document.createElement('p')
     produto.textContent=info.nome
     produto.classList.add('text-[#ffffff]','text-3xl')
+
     const valor = document.createElement('p')
     valor.classList.add('text-[#ffffff]','text-3xl')
     valor.textContent= 'R$'+info.valor_unitario
+
     const icones = document.createElement('div')
     icones.classList.add('text-[#fffffff]','text-3xl','flex','gap-4')
+
     const iconeEditar = document.createElement('i')
     iconeEditar.classList.add('bx','bx-pencil','cursor-pointer')
+
     const iconeDeletar = document.createElement('i')
     iconeDeletar.classList.add('bx','bxs-trash-alt','text-[#FF0000]','cursor-pointer') 
     const iconeAdicionar = document.createElement ('i')
+    
     iconeAdicionar.classList.add('bx', 'bx-plus-medical')
     iconeAdicionar.id = 'add'
 
