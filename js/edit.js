@@ -11,7 +11,7 @@ async function dadosFilme(){
         
       
         const infoFilme = await getFilme(id)
-        // console.log(infoFilme.sinopse)
+        console.log(infoFilme)
         
         const nome = document.getElementById('nome')
         
@@ -38,7 +38,7 @@ async function dadosFilme(){
         lancamento.value = infoFilme.data_lancamento.slice(0,10)
         // console.log(infoFilme.data_lancamento.slice(0,10))
         relancamento.value = infoFilme.data_relancamento
-        classifi.value = infoFilme.tbl_classificacao_id
+        classifi.value = infoFilme.classificacao[0].id
 
         const salvar = document.getElementById('salvar')
 

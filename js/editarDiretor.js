@@ -1,14 +1,14 @@
 'use strict'
-import { getAtor,getAtorById,postAtor, putAtor} from "./ator.js"
+import { getDiretor,getDiretorById,postDiretor, putDiretor} from "./diretor.js"
 const id = new URLSearchParams(window.location.search).get('id')
 
 
 // função para puxar os dados do filme pelo ID
-async function dadosAtor(){
+async function dadosDiretor(){
     
     if(id){
-        const infoAtor = await getAtorById(id)
-        console.log(infoAtor);
+        const infoDiretor = await getDiretorById(id)
+        console.log(infoDiretor);
         // console.log(infoFilme.sinopse)
         
         const nome = document.getElementById('nome')
@@ -24,14 +24,15 @@ async function dadosAtor(){
         const poster = document.getElementById('poster')
         
         
-        nome.value = infoAtor.nome
-        biografia.textContent = infoAtor.biografia
-        nascimento.value = infoAtor.data_nascimento.slice(0,10)
-        if(infoAtor.data_falecimento){
-            falecimento.value = infoAtor.data_falecimento.slice(0,10)
+        nome.value = infoDiretor.nome
+        biografia.textContent = infoDiretor.biografia
+        nascimento.value = infoDiretor.data_nascimento.slice(0,10)
+        if(infoDiretor.data_falecimento){
+            falecimento.value = infoDiretor.data_falecimento.slice(0,10)
         }
-        sexo.value = infoAtor.sexo[0].id
-        poster.src = infoAtor.foto
+        console.log(infoDiretor)
+        sexo.value = infoDiretor.tbl_sexo_id
+        poster.src = infoDiretor.foto
        
         const editar = document.getElementById('editar')
 
@@ -56,9 +57,9 @@ editar.addEventListener('click', async () => {
         foto: fotoAtorInput
     }
 
-    const result = await putAtor(id, alteracoes)
+    const result = await putDiretor(id, alteracoes)
     if(result){
-        window.location.href = '../html/ator.html';
+        window.location.href = '../html/diretor.html';
     } else {
         alert("Deu erro")
     }
@@ -83,4 +84,4 @@ link.addEventListener('keyup', ()=>{
 })
 
 
-dadosAtor()
+dadosDiretor()

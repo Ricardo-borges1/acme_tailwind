@@ -42,8 +42,6 @@ export async function deleteAtor(id){
 }
 
 export async function putAtor (id,ator){
-
-    
     const url = `http://localhost:8080/v2/filmesAcme/updateAtores/${id}`
 
     const options = {
@@ -53,10 +51,8 @@ export async function putAtor (id,ator){
         },
         body: JSON.stringify(ator)
     }
-
     
     const response = await fetch (url,options)
     console.log(response);
-
     return response.ok
 }
